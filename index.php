@@ -1,5 +1,6 @@
 <?php
-
+  $dir = 'videos/';
+  $films = scandir($dir, 1);
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -8,9 +9,15 @@
     <title>Home</title>
   </head>
   <body>
-    <video width="320" height="240" controls>
-      <source src="videos/Del_Reves.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <header></header>
+    <section>
+      <h1>List of available films : </h1>
+      <ul>
+  <?php foreach ($films as $key => $film) { if ($film != "." && $film != "..") { ?>
+          <li><a href="film.php?film=<?php echo $film; ?>"><?php echo $film; ?></a></li>
+  <?php } } ?>
+      </ul>
+    </section>
+    <footer></footer>
   </body>
 </html>
