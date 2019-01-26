@@ -1,15 +1,13 @@
 <?php
   $dir = 'videos/';
   $films = scandir($dir, 1);
+  $title = "Home";
 ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-  </head>
+
+  <?php include "includes/head.php"; ?>
+
   <body>
-    <header></header>
+    <?php include "includes/header.php" ?>
     <section>
       <h1>List of available films : </h1>
       <ul>
@@ -18,6 +16,5 @@
   <?php } } ?>
       </ul>
     </section>
-    <footer></footer>
-  </body>
-</html>
+
+  <?php include "includes/footer.php"; ?>
